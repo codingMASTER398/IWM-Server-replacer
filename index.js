@@ -52,6 +52,11 @@ function replaceServer(host){
   config.Server.Server_hostname_fallback = host
 }
 
+function defaultServer(){
+  config.Server.Server_hostname = "https://make.fangam.es"
+  config.Server.Server_hostname_fallback = "http://make.fangam.es"
+}
+
 function saveConfigIni(){
   fs.writeFileSync(configLocation, ini.stringify(config))
 }
@@ -79,7 +84,7 @@ Options:
 
   switch(option){
     case 1:
-      replaceServer(data.defaultServer)
+      defaultServer()
       saveConfigIni()
       break;
     case 2:

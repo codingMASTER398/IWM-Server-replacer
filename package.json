@@ -12,5 +12,8 @@
   "dependencies": {
     "ini": "^3.0.1",
     "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
   }
 }
